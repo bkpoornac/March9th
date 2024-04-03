@@ -7,7 +7,7 @@ pipeline {
 			steps {
 				sh '''
 					pwd
-					sleep 5
+					sleep 7
 					echo This is the fist stage: BUILD
 				'''
 			}	
