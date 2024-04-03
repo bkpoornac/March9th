@@ -1,30 +1,34 @@
 pipeline {
-    agent {
-        label 'slave1'
-    }
- 
-    stages {
-       stage ('BUILD') {
-           steps {
-                sh 'sleep 5'
-           }
-       } 
-       
-       stage ('TEST') {
-           steps {
-                sh 'sleep 5'
-           }
-       }
-        
-       stage ('DEPLOY') {
-           steps {
-                sh 'sleep 5'
-           }
-       }  
-       stage ('DEPLOY1') {
-           steps {
-                sh 'sleep 5'
-           }
-       }     
-    }
+	agent any  
+	stages {
+		stage('BUILD') {
+			steps {
+				sh '''
+					pwd
+					sleep 5
+					echo This is the fist stage: BUILD
+				'''
+			}	
+		}
+		
+		stage('TEST') {
+			steps {
+				sh '''
+					pwd
+					sleep 5
+					echo This is the fist stage: TEST
+				'''
+			}	
+		}
+		
+		stage('DEPLOY') {
+			steps {
+				sh '''
+					pwd
+					sleep 5
+					echo This is the fist stage: DEPLOY
+				'''
+			}	
+		}
+	}
 }
