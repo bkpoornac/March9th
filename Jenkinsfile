@@ -1,14 +1,11 @@
 pipeline {
-	agent {
-		lable 'Slave1'
-		
-		}
+	agent { label 'master' }
 	stages {
 		stage('BUILD') {
 			steps {
 				sh '''
 					pwd
-					sleep 7
+					sleep 5
 					echo This is the fist stage: BUILD
 				'''
 			}	
