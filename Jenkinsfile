@@ -1,6 +1,7 @@
 pipeline {
 	agent {
 		lable 'Slave1'
+		
 		}
 	stages {
 		stage('BUILD') {
